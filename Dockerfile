@@ -8,5 +8,5 @@ RUN apt-get update
 RUN apt-get -y install unzip
 RUN wget http://downloads.typesafe.com/typesafe-activator/${VERSION}/${ARCHIVE}\
 	&& unzip ${ARCHIVE}\
-	&& rm -f ${ARCHIVE}\
-	&& echo export PATH=\"/activator-${VERSION}-minimal:\$PATH\" >> ~/.bashrc
+	&& rm -f ${ARCHIVE}
+RUN ln -s /activator-${VERSION}-minimal/activator /usr/local/bin/activator
