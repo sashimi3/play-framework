@@ -10,3 +10,4 @@ RUN wget http://downloads.typesafe.com/typesafe-activator/${VERSION}/${ARCHIVE}\
 	&& unzip ${ARCHIVE}\
 	&& rm -f ${ARCHIVE}
 RUN ln -s /activator-${VERSION}-minimal/activator /usr/local/bin/activator
+EXPOSE 9000 80
